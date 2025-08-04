@@ -1,6 +1,6 @@
 ## -- Portfolio --
 
-Acá visualizarás cada uno de los proyectos que he llevado a cabo en mi trayectoria en ciencia de datos. Espero seguir aprendiendo.
+Acá visualizarás cada uno de los proyectos que he realizado en mi trayectoria en ciencia de datos. Espero seguir aprendiendo.
 
 Proyectos:
 
