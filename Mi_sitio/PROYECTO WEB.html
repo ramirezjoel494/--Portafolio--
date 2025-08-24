@@ -1,0 +1,1613 @@
+<!doctype html>
+<html lang="es"> <!-- Idioma -->
+  <head>
+    <meta charset="utf-8">  <!-- utf-8 sirve para que el navegador reconozca caracteres latinos como la "ñ" -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">  <!-- Sirve para que la pagina se muestre correctamente en celulares -->
+
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">   <!-- Favicon en: tools.dynamicdrive.com/favicon/ OJO: href="../../IMAGES/favicon.ico"  es la ruta donde está el favicon-->
+
+    <title>Portafolio de Joel Ramirez</title>
+
+    <!-- Archivos CSS BOOTSTRAP -->
+    <link href="bootstrap.min.css" rel="stylesheet">
+
+    <!-- Archivos CSS ESTILOS PERSONALIZADOS -->
+    <link href="estilos.css" rel="stylesheet">
+
+    <!-- Incluir Font Awesome en el proyecto -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Macondo&display=swap" rel="stylesheet">
+    
+
+  </head>
+  
+  <body class="m-0 p-0">
+    <main>
+
+      <!-- Menu de navegacion -->
+        <nav class="navbar navbar-dark bg-dark navbar-expand-md fixed-top">
+          <div class="container">
+            <a href="#" id="btnPortafolio" class="navbar-brand">
+              <strong>Portafolio</strong>
+            </a>
+
+            <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#menu" aria-expanded="false" aria-label="Desplegar menú de navegación">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="menu">
+              <ul class="navbar-nav" style="margin-left: auto;">
+                <li class="nav-item"><a href="#" class="nav-link active" data-seccion="inicio">Inicio</a></li>
+                <li class="nav-item"><a href="#" class="nav-link" data-seccion="acerca">Acerca de</a></li>
+                <li class="nav-item"><a href="#" class="nav-link" data-seccion="proyectos">Proyectos</a></li>
+                <li class="nav-item"><a href="#" class="nav-link" data-seccion="servicios">Servicios</a></li>
+                <li class="nav-item"><a href="#" class="nav-link" data-seccion="experiencia">Experiencia</a></li>
+                <li class="nav-item"><a href="#" class="nav-link" data-seccion="perfil">Mi perfil</a></li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+
+        <!-- Contenedor para contenido dinámico, fuera del nav -->
+        <div id="contenido-principal" class="container-fluid px-0 m-0 p-0">
+
+          <!-- Archivos BOOTSTRAP Javascript -->
+          <script src="jquery-3.6.0.min.js"></script>
+          <script src="popper.min.js"></script>
+          <script src="bootstrap.min.js"></script>
+          
+          <!-- Bootstrap CSS -->
+          <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+          <!-- Bootstrap JS Bundle (incluye Popper) -->
+          <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  
+          <!-- Swiper CSS -->
+          <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+
+          <!-- Swiper JS -->
+          <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
+          <!-- Codigo para menu dinamico -->
+          <script>
+            document.addEventListener('DOMContentLoaded', function() {
+              const enlaces = document.querySelectorAll('.nav-link[data-seccion]');
+              const contenedor = document.getElementById('contenido-principal');
+              const gallery = document.querySelector('.gallery');
+              const buttons = document.querySelectorAll('.buttons button');
+              const menu = document.getElementById('menu');
+              const menuLinks = menu.querySelectorAll('.nav-link'); 
+              
+
+              // Define el contenido que quieres mostrar para cada sección
+              const contenidos = {
+                inicio: `
+                  
+                                <!-- CARRUSEL -->
+                  <div id="carouselQuienSoy" class="carousel slide py-4" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                     
+                      <div class="carousel-item active">
+                        <img src="carrusel_inicio-01.jpg" class="d-block w-100" alt="...">
+                        <button class="btn btn-primary position-absolute btn-overlay">Ver más</button>
+
+                      </div>
+
+                      <div class="carousel-item">
+                        <img src="carrusel_inicio-02.jpg" class="d-block w-100" alt="...">
+                        <button class="btn btn-primary position-absolute btn-overlay">Ver más</button>
+
+                      </div>
+
+                      <div class="carousel-item">
+                        <img src="carrusel_inicio-03.jpg" class="d-block w-100" alt="...">
+                        <button class="btn btn-primary position-absolute btn-overlay">Ver más</button>
+
+                      </div>
+
+                      <div class="carousel-item">
+                        <img src="carrusel_inicio-04.jpg" class="d-block w-100" alt="...">
+                        <button class="btn btn-primary position-absolute btn-overlay">Ver más</button>
+
+                      </div>
+                      
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselQuienSoy" data-bs-slide="prev">
+                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Anterior</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselQuienSoy" data-bs-slide="next">
+                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Siguiente</span>
+                    </button>
+                  </div>
+
+
+                    <!-- SECCION BIENVENIDA -->
+                  
+                  <section class="filosofia py-5">
+                    <div class="container">
+                      <div class="bienvenida p-4 p-md-5 mx-auto shadow-lg" style="max-width: 900px;">
+                        
+                        <h1 class="display-4 fw-bold mb-4 text-center">
+                          ¡Bienvenidos a mi portafolio!
+                        </h1>
+                        
+                        <p class="lead mb-4 text-secondary" style="font-size: 1.25rem; line-height: 1.7; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
+                          Desarrollé esta página para compartir un resumen de mi praxis y experticia profesional específicamente con gestión de data financiera en diversas áreas estratégicas. Además, la participación que tuve en algunos proyectos. Encontrarás: códigos en lenguaje R y Python, pruebas de paqueterías de R, tratamiento y modelaje de datos; training en Business Intelligence, Portafolios, Big Data, Machine Learning, Neural Network, Time Series, Forecast, Dashboard Financiero y Evaluación de Proyectos.
+                        </p>
+                        
+                        <p class="lead text-secondary" style="font-size: 1.25rem; line-height: 1.7; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
+                          Para completar, un archivo de prácticas con bases de datos que incluyen extracción, filtrado y manipulación de data. También hay conexiones con Rstudio, actualización de paqueterías y dashboards integrados. Pronósticos con bases de datos reales y comparación de técnicas. De igual modo, encontrarás referencias de trabajos de investigación, actualizaciones y expansiones.
+                        </p>
+                      </div>
+                    </div>
+                  </section>
+
+
+                  <h1 class="lobstermacondo-regular text-center pb-4 custom-title">Contenido de portafolio</h1>
+
+                  <div class="carousel-wrapper">
+                    <button class="arrow arrow-left" aria-label="Scroll left" onclick="scrollCarousel(-300)">&#8249;</button>
+                    <button class="arrow arrow-right" aria-label="Scroll right" onclick="scrollCarousel(300)">&#8250;</button>
+
+                    <div class="carousel" id="carousel">
+                      <article class="col-12 col-md-6 col-lg-3 pb-4 pb-lg-0">
+                        <div class="card">
+                          <img src="contenido_portafolio-02.jpg" class="card-img-top" alt="Lugares favoritos">
+                          <div class="card-body">
+                            <h5 class="card-title">Proyecto 2</h5>
+                            <p class="card-text">
+                              Dentro de mis lugares favoritos se encuentran la playa, la montaña, el cine y lugares turísticos teniendo en cuenta el aspecto pintoresco.
+                            </p>
+                            <button id="btnLeerMas" class="btn btn-primary">Leer más</button>
+                          </div>
+                        </div>
+                      </article>
+
+                      <article class="col-12 col-md-6 col-lg-3 pb-4 pb-lg-0">
+                        <div class="card">
+                          <img src="contenido_portafolio-03.jpg" class="card-img-top" alt="Lugares favoritos">
+                          <div class="card-body">
+                            <h5 class="card-title">Proyecto 3</h5>
+                            <p class="card-text">
+                              Dentro de mis lugares favoritos se encuentran la playa, la montaña, el cine y lugares turísticos teniendo en cuenta el aspecto pintoresco.
+                            </p>
+                            <button id="btnLeerMas2" class="btn btn-primary">Leer más</button>
+                          </div>
+                        </div>
+                      </article>
+
+                      <article class="col-12 col-md-6 col-lg-3 pb-4 pb-lg-0">
+                        <div class="card">
+                          <img src="contenido_portafolio-04.jpg" class="card-img-top" alt="Lugares favoritos">
+                          <div class="card-body">
+                            <h5 class="card-title">Proyecto 4</h5>
+                            <p class="card-text">
+                              Dentro de mis lugares favoritos se encuentran la playa, la montaña, el cine y lugares turísticos teniendo en cuenta el aspecto pintoresco.
+                            </p>
+                            <button id="btnLeerMas2" class="btn btn-primary">Leer más</button>
+                          </div>
+                        </div>
+                      </article>
+
+                      <article class="col-12 col-md-6 col-lg-3 pb-4 pb-lg-0">
+                        <div class="card">
+                          <img src="contenido_portafolio-04.jpg" class="card-img-top" alt="Lugares favoritos">
+                          <div class="card-body">
+                            <h5 class="card-title">Proyecto 4</h5>
+                            <p class="card-text">
+                              Dentro de mis lugares favoritos se encuentran la playa, la montaña, el cine y lugares turísticos teniendo en cuenta el aspecto pintoresco.
+                            </p>
+                            <button id="btnLeerMas3" class="btn btn-primary">Leer más</button>
+                          </div>
+                        </div>
+                      </article>
+
+                      <article class="col-12 col-md-6 col-lg-3 pb-4 pb-lg-0">
+                        <div class="card">
+                          <img src="contenido_portafolio-04.jpg" class="card-img-top" alt="Lugares favoritos">
+                          <div class="card-body">
+                            <h5 class="card-title">Proyecto 4</h5>
+                            <p class="card-text">
+                              Dentro de mis lugares favoritos se encuentran la playa, la montaña, el cine y lugares turísticos teniendo en cuenta el aspecto pintoresco.
+                            </p>
+                            <button id="btnLeerMas4" class="btn btn-primary">Leer más</button>
+                          </div>
+                        </div>
+                      </article>
+
+                      <article class="col-12 col-md-6 col-lg-3 pb-4 pb-lg-0">
+                        <div class="card">
+                          <img src="contenido_portafolio-04.jpg" class="card-img-top" alt="Lugares favoritos">
+                          <div class="card-body">
+                            <h5 class="card-title">Proyecto 4</h5>
+                            <p class="card-text">
+                              Dentro de mis lugares favoritos se encuentran la playa, la montaña, el cine y lugares turísticos teniendo en cuenta el aspecto pintoresco.
+                            </p>
+                            <button id="btnLeerMas4" class="btn btn-primary">Leer más</button>
+                          </div>
+                        </div>
+                      </article>
+                    </div>
+                  </div>
+
+
+                    <!-- PIE DE PAGINA -->
+                  <footer class="pie-de-pagina bg-dark text-white py-4">
+                    <div class="container text-center">
+
+                      <div class="iconos-contacto-2 d-flex justify-content-center gap-3 mt-3">
+                        <a href="https://www.instagram.com/joel4.0" target="_blank" class="icono-circle instagram" aria-label="Instagram">
+                          <i class="fab fa-instagram fa-lg"></i>
+                        </a>
+                        <a href="https://wa.me/584127397057" target="_blank" class="icono-circle whatsapp" aria-label="WhatsApp">
+                          <i class="fab fa-whatsapp fa-lg"></i>
+                        </a>
+                        <a href="https://github.com/ramirezjoel494" target="_blank" class="icono-circle github" aria-label="GitHub">
+                          <i class="fab fa-github fa-lg"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/joel-ramirez-7774391a3/" target="_blank" class="icono-circle linkedin" aria-label="LinkedIn">
+                          <i class="fab fa-linkedin-in fa-lg"></i>
+                        </a>
+                      </div>
+
+                      <p class="mt-3">
+                        Copyright © 2025 Joel J. Ramirez | Data Scientist | Site created with RStudio 
+                      </p>
+
+                      <p class="mt-3">
+                        INTELLIGENCE BUSSINES | DATA ANALYST | DATA SCIENCE FOR FINANCE | DATA SCIENCE FOR MARKETING | MACHINE LEARNING | AI FOR DATA SCIENCE | 
+                      </p>
+                      
+                    </div>
+                  </footer>
+                `,
+                acerca: `
+                  <h2 class="container-fluid px-0 m-0 p-0">Acerca de mí</h2>
+                  
+                                <!-- DATOS Y ENLACE A MI PERFIL -->
+                  <section class="acerca py-7 text-center text-white contenedor-espaciado mt-0">
+                    <div class="container">
+                      <div class="row">
+                        <div class="col-12 py-5">
+                          <img src="chamo.jpg" alt="Avatar de Joel Ramirez" width="260px" height="auto" class="img-fluid rounded-circle mb-1">
+                          <p class="h1 font-italic py-2" style="font-weight: italic">-  Joel Ramirez</p>
+                          <p class="h2">| Cientifico de datos |</p>
+                        </div>
+                      </div>
+                    </div>
+                  </section>
+                  
+
+                  <div class="mx-5 mb-5 mt-0 p-4" style="
+                      background-color: #222;       /* Negro claro (gris muy oscuro) */
+                      border-radius: 15px;          /* Bordes redondeados */
+                      box-shadow: 0 4px 10px rgba(0,0,0,0.3); /* Sombra sutil */
+                                      /* Texto blanco */
+                    ">
+                      <p class="h3 contenedor-espaciado">
+                        Bienvenidos!!
+                        <br><br>
+                        Apasionado por la ciencia de datos y el aprendizaje automático, con experiencia en programación avanzada y modelado predictivo. Capaz de diseñar, implementar y validar modelos estadísticos y de aprendizaje automático para resolver problemas complejos y generar valor a partir de grandes volúmenes de datos. <br><br>
+                        Mi objetivo es contribuir a un equipo dinámico donde pueda aplicar mis conocimientos en programación y análisis de datos, al mismo tiempo que continuar desarrollando mis habilidades en data science y áreas relacionadas. Estoy comprometido con el aprendizaje continuo y la mejora profesional en un entorno impulsado por datos.<br>
+                      </p>
+                    </div>
+
+                  <div class="row justify-content-center">
+                      
+                    <!-- Tarjeta de LinkedIn -->
+                      <article class="col-12 col-md-6 col-lg-3 pb-4 pb-lg-0 text-start contenedor-espaciado mx-3">
+                        <div class="card">
+                          <img src="imagen1.jpg" class="card-img-top h-100" alt="Lugares favoritos">
+                          <div class="card-body">
+                            <h5 class="card-title">Perfil de LinkedIn</h5>
+                            <p class="card-text">
+                              <ul>
+                                <li>Cientifico de datos</li>
+                                <li>Ingeniero mecánico</li>
+                                <li>Editor de video</li>
+                                <li>Editor de video</li>
+                                <li>Editor de video</li>
+                                <li>Editor de video</li>
+                                
+                              </ul>
+                            </p>
+                            <a href="https://www.linkedin.com/in/joel-ramirez-7774391a3/" class="btn btn-dark" target="_blank" rel="noopener noreferrer">
+                              Ir a LinkedIn
+                            </a>
+                          </div>
+                        </div>
+                      </article>
+
+                      <!-- Tarjeta de GitHub -->
+                      <article class="col-12 col-md-6 col-lg-3 pb-4 pb-lg-0 text-start contenedor-espaciado mx-3">
+                        <div class="card">
+                          <img src="python.jpg" class="card-img-top h-100" alt="Perfil de GitHub">
+                          <div class="card-body">
+                            <h5 class="card-title">Perfil de GitHub</h5>
+                            <p class="card-text">
+                              <ul>
+                                <li>Desarrollador de software</li>
+                                <li>Contribuidor open source</li>
+                                <li>Experto en Python y R</li>
+                                <li>Editor de video</li>
+                                <li>Editor de video</li>
+                                <li>Editor de video</li>
+                                <li>Editor de video</li>
+                              </ul>
+                            </p>
+                            <a href="https://github.com/ramirezjoel494" class="btn btn-dark" target="_blank" rel="noopener noreferrer">
+                              Ir a GitHub
+                            </a>
+                          </div>
+                        </div>
+                      </article>
+
+                      <!-- Tarjeta de Rpubs -->
+                      <article class="col-12 col-md-6 col-lg-3 pb-4 pb-lg-0 text-start contenedor-espaciado mx-3">
+                        <div class="card">
+                          <img src="power bi.png" class="card-img-top h-100" alt="Perfil de Rpubs">
+                          <div class="card-body">
+                            <h5 class="card-title">Perfil de Rpubs</h5>
+                            <p class="card-text">
+                              <ul>
+                                <li>Publicaciones de análisis</li>
+                                <li>Proyectos en R Markdown</li>
+                                <li>Visualizaciones interactivas</li>
+                                <li>Editor de video</li>
+                                <li>Editor de video</li>
+                                <li>Editor de video</li>
+                              </ul>
+                            </p>
+                            <a href="https://rpubs.com/tu-usuario" class="btn btn-dark" target="_blank" rel="noopener noreferrer">
+                              Ir a Rpubs
+                            </a>
+                          </div>
+                        </div>
+                      </article>
+                    </div>
+
+                    <h4 class = "mx-5"> Portafolio realizado usando: </h4>
+
+                  <div class="row justify-content-center align-items-center my-4">
+                    <div class="col-4 col-sm-3 col-md-2 text-center mb-3">
+                      <img src="R logo.jpg" alt="Logo R" class="img-fluid" style="max-height: 60px;">
+                    </div>
+                    <div class="col-4 col-sm-3 col-md-2 text-center mb-3">
+                      <img src="R logo.jpg" alt="Logo Python" class="img-fluid" style="max-height: 60px;">
+                    </div>
+                    <div class="col-4 col-sm-3 col-md-2 text-center mb-3">
+                      <img src="R logo.jpg" alt="Logo HTML" class="img-fluid" style="max-height: 60px;">
+                    </div>
+                    <div class="col-4 col-sm-3 col-md-2 text-center mb-3">
+                      <img src="R logo.jpg" alt="Logo JavaScript" class="img-fluid" style="max-height: 60px;">
+                    </div>
+                    <div class="col-4 col-sm-3 col-md-2 text-center mb-3">
+                      <img src="R logo.jpg" alt="Logo Tableau" class="img-fluid" style="max-height: 60px;">
+                    </div>
+                    <div class="col-4 col-sm-3 col-md-2 text-center mb-3">
+                      <img src="R logo.jpg" alt="Logo Power BI" class="img-fluid" style="max-height: 60px;">
+                    </div>
+                  </div>
+                  
+                    <!-- PIE DE PAGINA -->
+                  <footer class="pie-de-pagina bg-dark text-white py-4">
+                    <div class="container text-center">
+
+                      <div class="iconos-contacto-2 d-flex justify-content-center gap-3 mt-3">
+                        <a href="https://www.instagram.com/joel4.0" target="_blank" class="icono-circle instagram" aria-label="Instagram">
+                          <i class="fab fa-instagram fa-lg"></i>
+                        </a>
+                        <a href="https://wa.me/584127397057" target="_blank" class="icono-circle whatsapp" aria-label="WhatsApp">
+                          <i class="fab fa-whatsapp fa-lg"></i>
+                        </a>
+                        <a href="https://github.com/ramirezjoel494" target="_blank" class="icono-circle github" aria-label="GitHub">
+                          <i class="fab fa-github fa-lg"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/joel-ramirez-7774391a3/" target="_blank" class="icono-circle linkedin" aria-label="LinkedIn">
+                          <i class="fab fa-linkedin-in fa-lg"></i>
+                        </a>
+                      </div>
+
+                      <p class="mt-3">
+                        Copyright © 2025 Joel J. Ramirez | Data Scientist | Site created with RStudio 
+                      </p>
+
+                      <p class="mt-3">
+                        INTELLIGENCE BUSSINES | DATA ANALYST | DATA SCIENCE FOR FINANCE | DATA SCIENCE FOR MARKETING | MACHINE LEARNING | AI FOR DATA SCIENCE | 
+                      </p>
+                      
+                    </div>
+                  </footer>
+                  
+                `,
+                proyectos: `
+                  
+                  <div id="contenedorProyectos">
+                    <h2 class="text-center mb-5">Mis proyectos</h2>
+
+                    <div class="contenedorsito mx-5 mb-5 mt-3 proyecto">
+                      <div class="texto">
+                        <h2>Motor de scraping web</h2>
+                        <h4>Subtítulo aquí</h4>
+                        <p>
+                          El área vital de todo negocio y base del presupuesto anual son las ventas. Existen muchos métodos para realizar un pronóstico de ventas a partir de la experiencia y la observación del propio negocio sin embargo, cuando combinamos esos métodos con la modelización estadística los resultados no solo mejoran, sino, que se ahorra tiempo y disminuye el margen de error.<br><br>
+                          En el portafolio se encuentra una metodología para realizar un pronóstico de ventas en volumen a partir del histórico del negocio, se utilizan varios modelos estadísticos a través de la paquetería de R TSstudio para generar gráficos interactivos que permitirán una mejor manipulación y visualización de datos vanguardista.<br>
+                        </p>
+                        <button id="btnIrProyecto" class="btn btn-primary">Ir al proyecto</button>
+                      </div>
+                      <div class="imagen">
+                        <img src="R logo.jpg" alt="Es un adulto" />
+                      </div>
+                    </div>
+                    
+
+                    <div class="contenedorsito mx-5 mb-5 mt-3 proyecto">
+                      <div class="texto">
+                        <h2><br>Motor de sentimiento para analisis de texto</h2>
+                        <h4>Subtítulo aquí</h4>
+                        <p>
+                          El área vital de todo negocio y base del presupuesto anual son las ventas. Existen muchos métodos para realizar un pronóstico de ventas a partir de la experiencia y la observación del propio negocio sin embargo, cuando combinamos esos métodos con la modelización estadística los resultados no solo mejoran, sino, que se ahorra tiempo y disminuye el margen de error.<br>
+                          <br>En el portafolio se encuentra una metodología para realizar un pronóstico de ventas en volumen a partir del histórico del negocio, se utilizan varios modelos estadísticos a través de la paquetería de R TSstudio para generar gráficos interactivos que permitirán una mejor manipulación y visualización de datos vanguardista.<br>
+                        </p>
+                        <button id="btnIrProyecto2" class="btn btn-primary">Ir al proyecto</button>
+                      </div>
+                      <div class="imagen">
+                        <img src="python.jpg" alt="Es un adulto" />
+                      </div>
+                    </div>
+                    
+
+                    <div class="contenedorsito mx-5 mb-5 mt-3 proyecto">
+                      <div class="texto">
+                        <h2><br>Extractor de entidades</h2>
+                        <h4>Subtítulo aquí</h4>
+                        <p>
+                          El área vital de todo negocio y base del presupuesto anual son las ventas. Existen muchos métodos para realizar un pronóstico de ventas a partir de la experiencia y la observación del propio negocio sin embargo, cuando combinamos esos métodos con la modelización estadística los resultados no solo mejoran, sino, que se ahorra tiempo y disminuye el margen de error.<br>
+                          <br>En el portafolio se encuentra una metodología para realizar un pronóstico de ventas en volumen a partir del histórico del negocio, se utilizan varios modelos estadísticos a través de la paquetería de R TSstudio para generar gráficos interactivos que permitirán una mejor manipulación y visualización de datos vanguardista.<br>
+                        </p>
+                        <button id="btnIrProyecto3" class="btn btn-primary">Ir al proyecto</button>
+                      </div>
+                      <div class="imagen">
+                        <img src="power bi.png" alt="Es un adulto" />
+                      </div>
+                    </div>
+                  
+                      
+                    <div class="contenedorsito mx-5 mb-5 mt-3 proyecto">
+                      <div class="texto">
+                        <h2><br>Analisis de previsión de demanda</h2>
+                        <h4>Subtítulo aquí</h4>
+                        <p>
+                          El área vital de todo negocio y base del presupuesto anual son las ventas. Existen muchos métodos para realizar un pronóstico de ventas a partir de la experiencia y la observación del propio negocio sin embargo, cuando combinamos esos métodos con la modelización estadística los resultados no solo mejoran, sino, que se ahorra tiempo y disminuye el margen de error.<br>
+                          <br>En el portafolio se encuentra una metodología para realizar un pronóstico de ventas en volumen a partir del histórico del negocio, se utilizan varios modelos estadísticos a través de la paquetería de R TSstudio para generar gráficos interactivos que permitirán una mejor manipulación y visualización de datos vanguardista.<br>
+                        </p>
+                        <button id="btnIrProyecto4" class="btn btn-primary">Ir al proyecto</button>
+                      </div>
+                      <div class="imagen">
+                        <img src="portfolio.jpg" alt="Es un adulto" />
+                      </div>
+                    </div>
+
+                    <div class="contenedorsito mx-5 mb-5 mt-3 proyecto">
+                      <div class="texto">
+                        <h2><br>Segmentación de clientes</h2>
+                        <h4>Subtítulo aquí</h4>
+                        <p>
+                          El área vital de todo negocio y base del presupuesto anual son las ventas. Existen muchos métodos para realizar un pronóstico de ventas a partir de la experiencia y la observación del propio negocio sin embargo, cuando combinamos esos métodos con la modelización estadística los resultados no solo mejoran, sino, que se ahorra tiempo y disminuye el margen de error.<br>
+                          <br>En el portafolio se encuentra una metodología para realizar un pronóstico de ventas en volumen a partir del histórico del negocio, se utilizan varios modelos estadísticos a través de la paquetería de R TSstudio para generar gráficos interactivos que permitirán una mejor manipulación y visualización de datos vanguardista.<br>
+                        </p>
+                        <button id="btnIrProyecto5" class="btn btn-primary">Ir al proyecto</button>
+                      </div>
+                      <div class="imagen">
+                        <img src="portfolio.jpg" alt="Es un adulto" />
+                      </div>
+                    </div>
+
+                    <div class="contenedorsito mx-5 mb-5 mt-3 proyecto">
+                      <div class="texto">
+                        <h2><br>Sistema de recomendación</h2>
+                        <h4>Subtítulo aquí</h4>
+                        <p>
+                          El área vital de todo negocio y base del presupuesto anual son las ventas. Existen muchos métodos para realizar un pronóstico de ventas a partir de la experiencia y la observación del propio negocio sin embargo, cuando combinamos esos métodos con la modelización estadística los resultados no solo mejoran, sino, que se ahorra tiempo y disminuye el margen de error.<br>
+                          <br>En el portafolio se encuentra una metodología para realizar un pronóstico de ventas en volumen a partir del histórico del negocio, se utilizan varios modelos estadísticos a través de la paquetería de R TSstudio para generar gráficos interactivos que permitirán una mejor manipulación y visualización de datos vanguardista.<br>
+                        </p>
+                        <button id="btnIrProyecto6" class="btn btn-primary">Ir al proyecto</button>
+                      </div>
+                      <div class="imagen">
+                        <img src="portfolio.jpg" alt="Es un adulto" />
+                      </div>
+                    </div>
+                    
+                    
+                  </div>
+
+                    <!-- PIE DE PAGINA -->
+                  <footer class="pie-de-pagina bg-dark text-white py-4">
+                    <div class="container text-center">
+
+                      <div class="iconos-contacto-2 d-flex justify-content-center gap-3 mt-3">
+                        <a href="https://www.instagram.com/joel4.0" target="_blank" class="icono-circle instagram" aria-label="Instagram">
+                          <i class="fab fa-instagram fa-lg"></i>
+                        </a>
+                        <a href="https://wa.me/584127397057" target="_blank" class="icono-circle whatsapp" aria-label="WhatsApp">
+                          <i class="fab fa-whatsapp fa-lg"></i>
+                        </a>
+                        <a href="https://github.com/ramirezjoel494" target="_blank" class="icono-circle github" aria-label="GitHub">
+                          <i class="fab fa-github fa-lg"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/joel-ramirez-7774391a3/" target="_blank" class="icono-circle linkedin" aria-label="LinkedIn">
+                          <i class="fab fa-linkedin-in fa-lg"></i>
+                        </a>
+                      </div>
+
+                      <p class="mt-3">
+                        Copyright © 2025 Joel J. Ramirez | Data Scientist | Site created with RStudio 
+                      </p>
+
+                      <p class="mt-3">
+                        INTELLIGENCE BUSSINES | DATA ANALYST | DATA SCIENCE FOR FINANCE | DATA SCIENCE FOR MARKETING | MACHINE LEARNING | AI FOR DATA SCIENCE | 
+                      </p>
+                      
+                    </div>
+                  </footer>
+
+                `,
+                servicios: `
+                    <div class="contenedor">
+                      <img src="portfolio.jpg" alt="Imagen de ejemplo" />
+                      
+                      <a href="CV ACTUAL - analista.pdf" download class="boton-encima">Descargar CV</a>
+                    </div>
+
+                    
+
+
+                    <section class="proyectos py-4">
+                      <div class="container">
+                        <h1 class="display-4 text-center pb-4 mt-4" style="font-weight: bold;">Catalogo de servicios</h1>
+                        <p class="display-6 text-center pb-4" style="font-weight: italic;">Data analyst │Business Intelligence │Machine Learning │</p>
+                        <div class="row text-md-center">
+                          
+                        <article class="col-12 col-md-6 col-lg-3 pb-4 pb-lg-0">
+                          <div class="card">
+                              <img src="imagen1.jpg" class="card-img-top h-100" alt="Lugares favoritos">
+                              <div class="card-body">
+                                
+                                <h5 class="card-title">Data analyst</h5>
+                                <p class="card-text">
+                                    Pronosticos
+                                </p>
+
+                                <!-- Botón que abre el modal -->
+                                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalPronosticos">
+                                  Leer más
+                                </button>
+
+                              </div>
+                            </div>
+                          </article>
+
+                          <article class="col-12 col-md-6 col-lg-3 pb-4 pb-lg-0">
+                          <div class="card">
+                              <img src="imagen1.jpg" class="card-img-top h-100" alt="Lugares favoritos">
+                              <div class="card-body">
+                                
+                                <h5 class="card-title">Data Sciencie</h5>
+                                <p class="card-text">
+                                    Dentro de mis lugares favoritos se encuentran la playa, la montaña, el cine y lugares turisticos teniendo en cuenta el aspecto pintoresco.
+                                </p>
+
+                                <!-- Botón que abre el modal -->
+                                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalSegmentacion">
+                                  Leer más
+                                </button>
+
+                              </div>
+                            </div>
+                          </article>
+
+                          <article class="col-12 col-md-6 col-lg-3 pb-4 pb-lg-0">
+                          <div class="card">
+                              <img src="imagen1.jpg" class="card-img-top h-100" alt="Lugares favoritos">
+                              <div class="card-body">
+                                
+                                <h5 class="card-title">Business Intelligence</h5>
+                                <p class="card-text">
+                                    Dentro de mis lugares favoritos se encuentran la playa, la montaña, el cine y lugares turisticos teniendo en cuenta el aspecto pintoresco.
+                                </p>
+
+                                <!-- Botón que abre el modal -->
+                                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalRecomendaciones">
+                                  Leer más
+                                </button>
+
+                              </div>
+                            </div>
+                          </article>
+
+                          <article class="col-12 col-md-6 col-lg-3 pb-4 pb-lg-0">
+                          <div class="card">
+                              <img src="imagen1.jpg" class="card-img-top h-100" alt="Lugares favoritos">
+                              <div class="card-body">
+                                
+                                <h5 class="card-title">Machine learning</h5>
+                                <p class="card-text">
+                                    Dentro de mis lugares favoritos se encuentran la playa, la montaña, el cine y lugares turisticos teniendo en cuenta el aspecto pintoresco.
+                                </p>
+
+                                <!-- Botón que abre el modal -->
+                                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalRedes">
+                                  Leer más
+                                </button>
+
+                              </div>
+                            </div>
+                          </article>
+
+                        </div>
+                      </div>
+                    </section>
+
+
+
+                  
+
+                    <div class="modal fade" id="modalPronosticos" tabindex="-1" aria-labelledby="modalPronosticosLabel" aria-hidden="true">
+                      <div class="modal-dialog modal-lg modal-dialog-centered">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <h5 class="modal-title" id="modalPronosticosLabel">Pronósticos de costos médicos</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                          </div>
+                          <div class="modal-body">
+                            <p>Aquí puedes agregar una descripción más detallada sobre los pronósticos de costos médicos, gráficos, imágenes o cualquier contenido que quieras mostrar al usuario.</p>
+                          </div>
+                          <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="modal fade" id="modalSegmentacion" tabindex="-1" aria-labelledby="modalSegmentacionLabel" aria-hidden="true">
+                      <div class="modal-dialog modal-lg modal-dialog-centered">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <h5 class="modal-title" id="modalSegmentacionLabel">Segmentación de clientes</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                          </div>
+                          <div class="modal-body">
+                            <p>Aquí puedes agregar una descripción más detallada sobre la segmentacion de clientes, gráficos, imágenes o cualquier contenido que quieras mostrar al usuario.</p>
+                          </div>
+                          <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="modal fade" id="modalRecomendaciones" tabindex="-1" aria-labelledby="modalRecomendacionesLabel" aria-hidden="true">
+                      <div class="modal-dialog modal-lg modal-dialog-centered">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <h5 class="modal-title" id="modalRecomendacionesLabel">Sistemas de recomendaciones</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                          </div>
+                          <div class="modal-body">
+                            <p>Aquí puedes agregar una descripción más detallada sobre los sistemas de recomendaciones, gráficos, imágenes o cualquier contenido que quieras mostrar al usuario.</p>
+                          </div>
+                          <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="modal fade" id="modalRedes" tabindex="-1" aria-labelledby="modalRedesLabel" aria-hidden="true">
+                      <div class="modal-dialog modal-lg modal-dialog-centered">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <h5 class="modal-title" id="modalRedesLabel">Analisis de redes sociales</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                          </div>
+                          <div class="modal-body">
+                            <p>Aquí puedes agregar una descripción más detallada sobre los analisis de redes sociales, gráficos, imágenes o cualquier contenido que quieras mostrar al usuario.</p>
+                          </div>
+                          <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+
+
+                                  <!-- CARRUSEL -->
+                    <section class="¿Quién soy? py-0">
+                      <div class="container-fluid px-0">
+                        <div class="row justify-content-center">
+                          <div class="col-12 px-0">
+                            <div id="carouselQuienSoy" class="carousel slide" data-bs-ride="carousel">
+                              <div class="carousel-inner">
+                                
+                                <div class="carousel-item active">
+                                  <img src="carrusel_inicio-01.jpg" class="d-block w-100" alt="Imagen 1">
+                                  <div class="carousel-caption d-none d-md-block">
+                                    <h5>Frase inspiradora 1</h5>
+                                  </div>
+                                </div>
+                                <div class="carousel-item">
+                                  <img src="carrusel_inicio-02.jpg" class="d-block w-100" alt="Imagen 2">
+                                  <div class="carousel-caption d-none d-md-block">
+                                    <h5>Frase inspiradora 2</h5>
+                                  </div>
+                                </div>
+                                <div class="carousel-item">
+                                  <img src="carrusel_inicio-03.jpg" class="d-block w-100" alt="Imagen 3">
+                                  <div class="carousel-caption d-none d-md-block">
+                                    <h5>Frase inspiradora 3</h5>
+                                  </div>
+                                </div>
+                                <div class="carousel-item">
+                                  <img src="carrusel_inicio-04.jpg" class="d-block w-100" alt="Imagen 3">
+                                  <div class="carousel-caption d-none d-md-block">
+                                    <h5>Frase inspiradora 3</h5>
+                                  </div>
+                                </div>
+                                <div class="carousel-item">
+                                  <img src="carrusel_inicio-05.jpg" class="d-block w-100" alt="Imagen 3">
+                                  <div class="carousel-caption d-none d-md-block">
+                                    <h5>Frase inspiradora 3</h5>
+                                  </div>
+                                </div>
+                                <div class="carousel-item">
+                                  <img src="carrusel_inicio-06.jpg" class="d-block w-100" alt="Imagen 3">
+                                  <div class="carousel-caption d-none d-md-block">
+                                    <h5>Frase inspiradora 3</h5>
+                                  </div>
+                                </div>
+                              </div>
+                              
+                              <button class="carousel-control-prev" type="button" data-bs-target="#carouselQuienSoy" data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Anterior</span>
+                              </button>
+                              <button class="carousel-control-next" type="button" data-bs-target="#carouselQuienSoy" data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Siguiente</span>
+                              </button>
+                              
+                            </div>
+                          </div>
+
+                        </div>
+                      </div>
+                    </section>
+
+                    <div class="perfil-principal">
+
+                      <!-- Primera fila: título y subtítulo -->
+                      <div class="fila titulo-principal text-center">
+                        <h1>Científico de datos</h1>
+                        <h3>Experto en el manejo de tecnologías aplicadas al entorno financiero de nuevos modelos de negocio.</h3>
+                      </div>
+                      <hr>
+
+                      <!-- Segunda fila: dos columnas (foto y objetivo) -->
+                      <div class="fila contenido-dos-columnas">
+                        <div class="columna foto-columna mt-4">
+                          <img src="chamo.jpg" alt="Foto de perfil" class="foto-perfil">
+                        </div>
+                        <div class="columna objetivo-columna">
+                          <h2>Mi Objetivo</h2>
+                          <p>
+                            Mi objetivo es desarrollar soluciones innovadoras que mejoren la experiencia del usuario y aporten valor real a los proyectos en los que participo.
+                          </p>
+                        </div>
+                      </div>
+
+                      <!-- Tercera fila: habilidades -->
+                      <div class="fila habilidades-fila text-center">
+                        <h2>Mis Habilidades</h2>
+                        <ul class="habilidades-lista text-center">
+                          <li>JavaScript</li>
+                          <li>Python</li>
+                          <li>HTML5</li>
+                          <li>CSS3</li>
+                          <li>SQL</li>
+                          <li>React</li>
+                          <li>Node.js</li>
+                          <li>Rstudio</li>
+                        </ul>
+                      </div>
+
+                    </div>
+                    
+
+                    <div class="carrusel-container my-4">
+                      <button class="carrusel-btn prev">&#10094;</button>
+                      <div class="carrusel-track">
+                        <img src="excel.jpeg" alt="img1">
+                        <img src="imagen1.jpg" alt="img2">
+                        <img src="librerias 2.png" alt="img3">
+                        <img src="librerias.jpg" alt="img4">
+                        <img src="mysql.png" alt="img5">
+                        <img src="niños.jpg" alt="img6">
+                        <img src="power bi.png" alt="img7">
+                        <img src="tableu.png" alt="img8">
+                        <img src="sheet.png" alt="img9">
+                        <img src="spark.png" alt="img10">
+                      </div>
+                      <button class="carrusel-btn next">&#10095;</button>
+                    </div>
+
+                      <!-- PIE DE PAGINA -->
+                    <footer class="pie-de-pagina bg-dark text-white py-4">
+                      <div class="container text-center">
+
+                        <div class="iconos-contacto-2 d-flex justify-content-center gap-3 mt-3">
+                          <a href="https://www.instagram.com/joel4.0" target="_blank" class="icono-circle instagram" aria-label="Instagram">
+                            <i class="fab fa-instagram fa-lg"></i>
+                          </a>
+                          <a href="https://wa.me/584127397057" target="_blank" class="icono-circle whatsapp" aria-label="WhatsApp">
+                            <i class="fab fa-whatsapp fa-lg"></i>
+                          </a>
+                          <a href="https://github.com/ramirezjoel494" target="_blank" class="icono-circle github" aria-label="GitHub">
+                            <i class="fab fa-github fa-lg"></i>
+                          </a>
+                          <a href="https://www.linkedin.com/in/joel-ramirez-7774391a3/" target="_blank" class="icono-circle linkedin" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin-in fa-lg"></i>
+                          </a>
+                        </div>
+
+                        <p class="mt-3">
+                          Copyright © 2025 Joel J. Ramirez | Data Scientist | Site created with RStudio 
+                        </p>
+
+                        <p class="mt-3">
+                          INTELLIGENCE BUSSINES | DATA ANALYST | DATA SCIENCE FOR FINANCE | DATA SCIENCE FOR MARKETING | MACHINE LEARNING | AI FOR DATA SCIENCE | 
+                        </p>
+                        
+                      </div>
+                    </footer>
+                
+                `,
+                experiencia: `
+                
+                      <!-- PIE DE PAGINA -->
+                    <footer class="pie-de-pagina bg-dark text-white py-4">
+                      <div class="container text-center">
+
+                        <div class="iconos-contacto-2 d-flex justify-content-center gap-3 mt-3">
+                          <a href="https://www.instagram.com/joel4.0" target="_blank" class="icono-circle instagram" aria-label="Instagram">
+                            <i class="fab fa-instagram fa-lg"></i>
+                          </a>
+                          <a href="https://wa.me/584127397057" target="_blank" class="icono-circle whatsapp" aria-label="WhatsApp">
+                            <i class="fab fa-whatsapp fa-lg"></i>
+                          </a>
+                          <a href="https://github.com/ramirezjoel494" target="_blank" class="icono-circle github" aria-label="GitHub">
+                            <i class="fab fa-github fa-lg"></i>
+                          </a>
+                          <a href="https://www.linkedin.com/in/joel-ramirez-7774391a3/" target="_blank" class="icono-circle linkedin" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin-in fa-lg"></i>
+                          </a>
+                        </div>
+
+                        <p class="mt-3">
+                          Copyright © 2025 Joel J. Ramirez | Data Scientist | Site created with RStudio 
+                        </p>
+
+                        <p class="mt-3">
+                          INTELLIGENCE BUSSINES | DATA ANALYST | DATA SCIENCE FOR FINANCE | DATA SCIENCE FOR MARKETING | MACHINE LEARNING | AI FOR DATA SCIENCE | 
+                        </p>
+                        
+                      </div>
+                    </footer>
+                `,
+                perfil: `
+                      <div class="container-fluid px-0">
+                          <div class="contenedor m-0 p-0 position-relative">
+                            
+                            <img src="portfolio.jpg" alt="Imagen de fondo" class="imagen-fondo" />
+                            
+                            <a href="CV ACTUAL - analista.pdf" download class="btn btn-primary boton-encima">Descargar CV</a>
+                              
+                            <div class="iconos-contacto d-flex justify-content-center gap-3 mt-3">
+                                    <a href="https://www.instagram.com/joel4.0?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" class="icono-circle instagram" aria-label="Instagram">
+                                      <i class="fab fa-instagram"></i>
+                                    </a>
+                                    <a href="https://wa.me/584127397057" target="_blank" class="icono-circle whatsapp" aria-label="WhatsApp">
+                                      <i class="fab fa-whatsapp"></i>
+                                    </a>
+                                    <a href="https://github.com/ramirezjoel494" target="_blank" class="icono-circle github" aria-label="GitHub">
+                                      <i class="fab fa-github fa-lg"></i>
+                                    </a>
+                                    <a href="https://www.linkedin.com/in/joel-ramirez-7774391a3/" target="_blank" class="icono-circle linkedin" aria-label="LinkedIn">
+                                      <i class="fab fa-linkedin-in"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="contenedor_perfil mx-5 my-5">
+                          <div class="row">
+                            <!-- Columna para el texto de bienvenida -->
+                            <div class="col-12 col-lg-6 mb-4">
+
+                              <h2> Acerca de mi </h2>
+
+                              <p class="h3 mx-3 mb-0">
+                                Bienvenidos!!
+                                <br><br>
+                                Apasionado por la ciencia de datos y el aprendizaje automático, con experiencia en programación avanzada y modelado predictivo. Capaz de diseñar, implementar y validar modelos estadísticos y de aprendizaje automático para resolver problemas complejos y generar valor a partir de grandes volúmenes de datos.
+                                <br><br>
+                                Mi objetivo es contribuir a un equipo dinámico donde pueda aplicar mis conocimientos en programación y análisis de datos, al mismo tiempo que continuar desarrollando mis habilidades en data science y áreas relacionadas. Estoy comprometido con el aprendizaje continuo y la mejora profesional en un entorno impulsado por datos.
+                              </p>
+                            </div>
+
+                            <!-- Columna para la tarjeta de LinkedIn -->
+                            <div class="col-12 col-lg-6">
+                              <article class="col-12 col-md-8 col-lg-10 pb-4 pb-lg-0 text-start contenedor-espaciado mx-auto">
+                                <h2> Información </h2>
+                                
+                                <h5>
+                                  <br>Edad: 27<br><br>
+                                  Email: ramirezjoel494@gmail.com<br><br>
+                                  Teléfono: +584127397057<br><br>
+                                  Dirección: Caracas, Venezuela<br><br>
+                                  Idioma: Español<br><br>
+                                  Servicios: link 1<br><br>
+                                  Portafolio: link 2<br><br>
+                                </h5>
+                                
+                                <div class="card h-100">
+                                  <img src="python.jpg" class="card-img-top h-100" alt="Perfil de GitHub" />
+                                  <div class="card-body d-flex flex-column justify-content-center align-items-center text-center">
+                                    <h5 class="card-title">Perfil de GitHub</h5>
+                                    <p class="card-text">
+                                      <ul class="list-unstyled mb-3">
+                                        <li>Desarrollador de software</li>
+                                        <li>Contribuidor open source</li>
+                                        <li>Experto en Python y R</li>
+                                      </ul>
+                                    </p>
+                                    <a href="https://github.com/ramirezjoel494" class="btn btn-primary" target="_blank" rel="noopener noreferrer">
+                                      Ir a GitHub
+                                    </a>
+                                  </div>
+                                </div>
+
+                              </article>
+
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="contenedor_perfil mx-5 my-5">
+                          <div class="row justify-content-center">
+                            <div class="col-12 col-lg-6 mb-4">
+                            
+                              <h2>Habilidades informáticas</h2>
+                              <div class="row">
+
+                                <!-- Primera columna de habilidades -->
+                                <div class="col-12 col-md-6">
+                                  <!-- Habilidad 1 -->
+                                  <div class="mb-3">
+                                    <label for="habilidad1" class="form-label">Python</label>
+                                    <div class="progress" style="height: 25px;">
+                                      <div class="progress-bar bg-success" role="progressbar" style="width: 85%;" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">
+                                        85%
+                                      </div>
+                                    </div>
+                                  </div>
+
+                                  <!-- Habilidad 2 -->
+                                  <div class="mb-3">
+                                    <label for="habilidad2" class="form-label">Machine Learning</label>
+                                    <div class="progress" style="height: 25px;">
+                                      <div class="progress-bar bg-info" role="progressbar" style="width: 75%;" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+                                        75%
+                                      </div>
+                                    </div>
+                                  </div>
+
+                                  <!-- Habilidad 3 -->
+                                  <div class="mb-3">
+                                    <label for="habilidad3" class="form-label">SQL</label>
+                                    <div class="progress" style="height: 25px;">
+                                      <div class="progress-bar bg-warning" role="progressbar" style="width: 90%;" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">
+                                        90%
+                                      </div>
+                                    </div>
+                                  </div>
+
+                                  <!-- Habilidad 4 -->
+                                  <div class="mb-3">
+                                    <label for="habilidad4" class="form-label">Tableau</label>
+                                    <div class="progress" style="height: 25px;">
+                                      <div class="progress-bar bg-danger" role="progressbar" style="width: 70%;" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">
+                                        70%
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+
+                                <!-- Segunda columna de habilidades -->
+                                <div class="col-12 col-md-6">
+                                  <!-- Habilidad 5 -->
+                                  <div class="mb-3">
+                                    <label for="habilidad5" class="form-label">Power BI</label>
+                                    <div class="progress" style="height: 25px;">
+                                      <div class="progress-bar bg-primary" role="progressbar" style="width: 80%;" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">
+                                        80%
+                                      </div>
+                                    </div>
+                                  </div>
+
+                                  <!-- Habilidad 6 -->
+                                  <div class="mb-3">
+                                    <label for="habilidad6" class="form-label">R</label>
+                                    <div class="progress" style="height: 25px;">
+                                      <div class="progress-bar bg-secondary" role="progressbar" style="width: 85%;" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">
+                                        85%
+                                      </div>
+                                    </div>
+                                  </div>
+
+                                  <!-- Habilidad 7 -->
+                                  <div class="mb-3">
+                                    <label for="habilidad7" class="form-label">JavaScript</label>
+                                    <div class="progress" style="height: 25px;">
+                                      <div class="progress-bar" style="background-color: #f0ad4e; width: 65%;" role="progressbar" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100">
+                                        65%
+                                      </div>
+                                    </div>
+                                  </div>
+
+                                  <!-- Habilidad 8 -->
+                                  <div class="mb-3">
+                                    <label for="habilidad8" class="form-label">Google Sheets</label>
+                                    <div class="progress" style="height: 25px;">
+                                      <div class="progress-bar" style="background-color: #34a853; width: 75%;" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+                                        75%
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                      <p class=" h3 contenedor-espaciado mx-5 mb-5 mt-0"  style="text-align: center">
+                        Portafolio
+                      </p>  
+
+                      <div class="buttons">
+                        <button data-set="1">
+                          <img src="power bi.png" alt="Set 1" />
+                        </button>
+                        <button data-set="2">
+                          <img src="python.jpg" alt="Set 2" />
+                        </button>
+                        <button data-set="3">
+                          <img src="portfolio.jpg" alt="Set 3" />
+                        </button>
+                      </div>
+
+                      <div class="gallery">
+                        <div class="image-container" data-index="0">
+                          <img src="chamo.jpg" alt="Imagen 1" />
+                          <div class="info-overlay">Información Imagen 1</div>
+                        </div>
+                        <div class="image-container" data-index="1">
+                          <img src="niños.jpg" alt="Imagen 2" />
+                          <div class="info-overlay">Información Imagen 2</div>
+                        </div>
+                        <div class="image-container" data-index="2">
+                          <img src="adulto.jpg" alt="Imagen 3" />
+                          <div class="info-overlay">Información Imagen 3</div>
+                        </div>
+                        <div class="image-container" data-index="3">
+                          <img src="chamo.jpg" alt="Imagen 4" />
+                          <div class="info-overlay">Información Imagen 4</div>
+                        </div>
+                      </div>
+
+                      
+                      <p class=" h3 contenedor-espaciado mx-5 mb-5 mt-5"  style="text-align: center">
+                        Educación
+                      </p> 
+                      
+                      <div class="wrapper">
+                          <div class="conteneitor">
+                            <img src="adulto.jpg" alt="Imagen 1" />
+                            <div class="contenido">
+                              <h2>Diplomado en Data Science Essential Training</h2>
+                              
+                              <p>
+                                Diplomado de tecnologías que marcan tendencia en el Data Science para la limpieza, procesamiento, análisis y visualización de datos. Por lo que, se labora con las herramientas más actuales del área, tales como R, Python y Tableau en conjunto con diversos modelos probabilísticos.                            
+                              </p>
+
+                            </div>
+                          </div>
+
+                          <div class="conteneitor">
+                            <img src="chamo.jpg" alt="Imagen 2" />
+                            <div class="contenido">
+                              <h2>Diplomado en Data Mining for Business Analytics</h2>
+                              
+                              <p>
+                                Diplomado en Data Mining for Business Analytics, laborando con los distintos algoritmos de clasificación y regresión, principalmente con la herramienta de código abierto más utilizada como lo es R, adquiriendo conocimientos en las aplicaciones más demandadas como lo son minería de texto, análisis de sentimientos y redes sociales.                            
+                              </p>
+
+                            </div>
+                          </div>
+
+                          <div class="conteneitor">
+                            <img src="niños.jpg" alt="Imagen 3" />
+                            <div class="contenido">
+                              <h2>Diplomado en Artificial Intelligence Essential Training</h2>
+                              
+                              <p>
+                                Diplomado orientado al estudio de los principales algoritmos de aprendizaje utilizados en inteligencia artificial, como el machine learning, deep learning, reinforcement learning y procesamiento en lenguaje natural, laborando con los principales lenguajes de código abierto, como R y Python, implementando librerías como Keras y Tensorflow.
+                              </p>
+
+                            </div>
+                          </div>
+
+                          <div class="conteneitor">
+                            <img src="niños.jpg" alt="Imagen 3" />
+                            <div class="contenido">
+                              <h2>Big Data Hadoop y Spark Developer</h2>
+                              
+                              <p>
+                                Laborando con los frameworks Hadoop y Spark para procesar grandes cantidades de datos, así como algoritmos complejos de Data Science utilizando el lenguaje R y tecnologías como HDSF, MapReduce y Bases de Datos NoSQL para identificar, analizar y gestionar información útil en el Análisis de Negocio.
+                              </p>
+
+                            </div>
+                          </div>
+
+                          <div class="conteneitor">
+                            <img src="niños.jpg" alt="Imagen 3" />
+                            <div class="contenido">
+                              <h2>SQL para ciencia de datos</h2>
+                              
+                              <p>
+                                Combinando habilidades de data science con SQL para dominar la extracción y manipulación de datos
+                              </p>
+
+                            </div>
+                          </div>
+
+                          <div class="conteneitor">
+                            <img src="niños.jpg" alt="Imagen 3" />
+                            <div class="contenido">
+                              <h2>Microsoft Power BI: Análisis de datos</h2>
+                              
+                              <p>
+                                Explorando los diversos métodos y mejores prácticas que están en línea con los requisitos comerciales y técnicos para construir modelos, visualizar y analizar datos con Microsoft Power BI.
+                              </p>
+
+                            </div>
+                          </div>
+
+                          <div class="conteneitor">
+                            <img src="niños.jpg" alt="Imagen 3" />
+                            <div class="contenido">
+                              <h2>Ingeniería mecánica</h2>
+                              
+                              <p>
+                                Explorando los diversos métodos y mejores prácticas que están en línea con los requisitos comerciales y técnicos para construir modelos, visualizar y analizar datos con Microsoft Power BI.
+                              </p>
+
+                            </div>
+                          </div>
+
+                          <div class="conteneitor">
+                            <img src="niños.jpg" alt="Imagen 3" />
+                            <div class="contenido">
+                              <h2>Inglés</h2>
+                              
+                              <p>
+                                Explorando los diversos métodos y mejores prácticas que están en línea con los requisitos comerciales y técnicos para construir modelos, visualizar y analizar datos con Microsoft Power BI.
+                              </p>
+
+                            </div>
+                          </div>
+
+                          <div class="conteneitor">
+                            <img src="niños.jpg" alt="Imagen 3" />
+                            <div class="contenido">
+                              <h2>Excel avanzado</h2>
+                              
+                              <p>
+                                Explorando los diversos métodos y mejores prácticas que están en línea con los requisitos comerciales y técnicos para construir modelos, visualizar y analizar datos con Microsoft Power BI.
+                              </p>
+
+                            </div>
+                          </div>
+
+                          <div class="conteneitor">
+                            <img src="niños.jpg" alt="Imagen 3" />
+                            <div class="contenido">
+                              <h2>Google sheet</h2>
+                              
+                              <p>
+                                Explorando los diversos métodos y mejores prácticas que están en línea con los requisitos comerciales y técnicos para construir modelos, visualizar y analizar datos con Microsoft Power BI.
+                              </p>
+
+                            </div>
+                          </div>
+
+                      </div>
+
+
+                      <p class=" h3 contenedor-espaciado mx-5 mb-5 mt-5"  style="text-align: center">
+                        Datos de contacto
+                      </p> 
+
+                      <div class="fondo-contenedor">
+                        <div class="tarjeta">
+                          <a href="https://www.linkedin.com/in/joel-ramirez-7774391a3/" target="_blank" class="linkedin" aria-label="Ir a LinkedIn">
+                            <img src="linkedin.png" alt="LinkedIn" />
+                          </a>
+                          <div class="datos">
+                            <h2>Joel Ramirez</h2>
+                            <p>Cientifico de datos</p>
+                            <p>Email: ramirezjoel494@gmail.com</p>
+                            <p>Teléfono: +584127397057</p>
+                            <p>Horario: De lunes a jueves de 8:00am a 4:00pm</p>
+                            <p>Dirección: Caracas, Venezuela</p>
+                            
+                          </div>
+                        </div>
+                      </div>
+
+                        <!-- PIE DE PAGINA -->
+                      <footer class="pie-de-pagina bg-dark text-white py-4">
+                        <div class="container text-center">
+
+                          <div class="iconos-contacto-2 d-flex justify-content-center gap-3 mt-3">
+                            <a href="https://www.instagram.com/joel4.0" target="_blank" class="icono-circle instagram" aria-label="Instagram">
+                              <i class="fab fa-instagram fa-lg"></i>
+                            </a>
+                            <a href="https://wa.me/584127397057" target="_blank" class="icono-circle whatsapp" aria-label="WhatsApp">
+                              <i class="fab fa-whatsapp fa-lg"></i>
+                            </a>
+                            <a href="https://github.com/ramirezjoel494" target="_blank" class="icono-circle github" aria-label="GitHub">
+                              <i class="fab fa-github fa-lg"></i>
+                            </a>
+                            <a href="https://www.linkedin.com/in/joel-ramirez-7774391a3/" target="_blank" class="icono-circle linkedin" aria-label="LinkedIn">
+                              <i class="fab fa-linkedin-in fa-lg"></i>
+                            </a>
+                          </div>
+
+                          <p class="mt-3">
+                            Copyright © 2025 Joel J. Ramirez | Data Scientist | Site created with RStudio 
+                          </p>
+
+                          <p class="mt-3">
+                            INTELLIGENCE BUSSINES | DATA ANALYST | DATA SCIENCE FOR FINANCE | DATA SCIENCE FOR MARKETING | MACHINE LEARNING | AI FOR DATA SCIENCE | 
+                          </p>
+                          
+                        </div>
+                      </footer>
+
+                `,
+              };
+
+            
+                // Función para cargar contenido y asignar eventos
+              function cargarSeccion(seccion) {
+                contenedor.innerHTML = contenidos[seccion] || '<p>Contenido no disponible.</p>';
+
+                // Si cargamos inicio, agregamos listener al botón Leer más
+                if (seccion === 'inicio') {
+                  const btnLeerMas = document.getElementById('btnLeerMas');
+                  const btnLeerMas2 = document.getElementById('btnLeerMas2');
+                  const btnLeerMas3 = document.getElementById('btnLeerMas3');
+                  const btnLeerMas4 = document.getElementById('btnLeerMas4');
+
+                  inicializarCarrusel();
+
+                    // Flechas carrusel
+                    const btnLeft = document.querySelector('.arrow-left');
+                    const btnRight = document.querySelector('.arrow-right');
+                    const carousel = document.getElementById('carousel');
+
+                    if (btnLeft && btnRight && carousel) {
+                      btnLeft.addEventListener('click', () => {
+                        carousel.scrollBy({ left: -300, behavior: 'smooth' });
+                      });
+                      btnRight.addEventListener('click', () => {
+                        carousel.scrollBy({ left: 300, behavior: 'smooth' });
+                      });
+                    }
+
+                    // Botones Leer más y sus acciones
+                    const botonesLeerMas = [
+                      { idBtn: 'btnLeerMas', idIrProyecto: 'btnIrProyecto' },
+                      { idBtn: 'btnLeerMas2', idIrProyecto: 'btnIrProyecto2' },
+                      { idBtn: 'btnLeerMas3', idIrProyecto: 'btnIrProyecto3' },
+                      { idBtn: 'btnLeerMas4', idIrProyecto: 'btnIrProyecto4' }
+                    ];
+
+                    botonesLeerMas.forEach(({ idBtn, idIrProyecto }) => {
+                      const btn = document.getElementById(idBtn);
+                      if (btn) {
+                        btn.addEventListener('click', () => {
+                          cargarSeccion('proyectos');
+                          setTimeout(() => {
+                            const btnIr = document.getElementById(idIrProyecto);
+                            if (btnIr) btnIr.click();
+                          }, 300);
+                        });
+                      }
+                    });
+
+
+                }
+
+                if (seccion === 'proyectos') {
+                  const btnIrProyecto = document.getElementById('btnIrProyecto');
+                  if (btnIrProyecto) {
+                    btnIrProyecto.addEventListener('click', () => {
+                      
+                      // Contenido detallado del proyecto
+                      contenedor.innerHTML = `
+                        
+                        <h2>Proyecto 1 - Detallado</h2>
+                        
+                        <p>Aquí va el contenido completo y detallado</p>
+                        
+                        <button id="btnVolver">Volver a proyectos</button>
+
+                      `;
+
+                      // Evento para volver a la lista de proyectos
+                      const btnVolver = document.getElementById('btnVolver');
+                      btnVolver.addEventListener('click', () => {
+                        cargarSeccion('proyectos');
+                      });
+                    });
+                  }
+
+                  if (btnIrProyecto2) {
+                    btnIrProyecto2.addEventListener('click', () => {
+                      
+                      // Contenido detallado del proyecto
+                      contenedor.innerHTML = `
+                        
+                        <h2>Proyecto 2 - Detallado</h2>
+                        
+                        <p>Aquí va el contenido completo y detallado</p>
+                        
+                        <button id="btnVolver">Volver a proyectos</button>
+
+                      `;
+
+                      // Evento para volver a la lista de proyectos
+                      const btnVolver = document.getElementById('btnVolver');
+                      btnVolver.addEventListener('click', () => {
+                        cargarSeccion('proyectos');
+                      });
+                    });
+                  }
+
+                  if (btnIrProyecto3) {
+                    btnIrProyecto3.addEventListener('click', () => {
+                      
+                      // Contenido detallado del proyecto
+                      contenedor.innerHTML = `
+                        
+                        <h2>Proyecto 3 - Detallado</h2>
+                        
+                        <p>Aquí va el contenido completo y detallado</p>
+                        
+                        <button id="btnVolver">Volver a proyectos</button>
+
+                      `;
+
+                      // Evento para volver a la lista de proyectos
+                      const btnVolver = document.getElementById('btnVolver');
+                      btnVolver.addEventListener('click', () => {
+                        cargarSeccion('proyectos');
+                      });
+                    });
+                  }
+
+                }
+
+                if (seccion === 'perfil') {
+
+                  const gallery = document.querySelector('.gallery');
+                  const buttons = document.querySelectorAll('.buttons button');
+
+                          // Datos de imágenes y textos para cada set
+                  const imageSets = {
+                    1: [
+                      {src: "potfolio.jpg", info: "Información Imagen 1"},
+                      {src: "R logo.jpg", info: "Información Imagen 2"},
+                      {src: "power bi.png", info: "Información Imagen 3"},
+                      {src: "python.jpg", info: "Información Imagen 4"},
+                    ],
+                    2: [
+                      {src: "sheet.png", info: "Set 2 - Imagen 1"},
+                      {src: "spark.png", info: "Set 2 - Imagen 2"},
+                      {src: "tableu.png", info: "Set 2 - Imagen 3"},
+                      {src: "niño.jpg", info: "Set 2 - Imagen 4"},
+                    ],
+                    3: [
+                      {src: "niña.jpg", info: "Set 3 - Imagen 1"},
+                      {src: "librerias.jpg", info: "Set 3 - Imagen 2"},
+                      {src: "librerias 2.png", info: "Set 3 - Imagen 3"},
+                      {src: "excel.jpg", info: "Set 3 - Imagen 4"},
+                    ]
+                  };
+
+                  // Cambiar imágenes al hacer click en botones
+                  buttons.forEach(button => {
+                    button.addEventListener('click', () => {
+                      const set = button.getAttribute('data-set');
+                      const images = imageSets[set];
+                      images.forEach((imgData, i) => {
+                        const container = gallery.querySelector(`.image-container[data-index="${i}"]`);
+                        const img = container.querySelector('img');
+                        const info = container.querySelector('.info-overlay');
+                        img.src = imgData.src;
+                        img.alt = imgData.info;
+                        info.textContent = imgData.info;
+                      });
+                    });
+                  });
+
+                  // Al hacer click en imagen, ir a sección proyectos
+                  gallery.querySelectorAll('.image-container').forEach(container => {
+                    container.addEventListener('click', () => {
+                  
+                        cargarSeccion('proyectos');
+                      
+                    });
+                  });
+                }
+
+                if (seccion === 'servicios') {
+
+                    const track = document.querySelector('.carrusel-track');
+                    const images = Array.from(track.children);
+                    
+                    const prevBtn = document.querySelector('.carrusel-btn.prev');
+                    
+                    const nextBtn = document.querySelector('.carrusel-btn.next');
+
+                    let currentIndex = 0;
+                    const imageWidth = images[0].getBoundingClientRect().width;
+
+                    function moveToIndex(index) {
+                      // Limitar índice para no salir del rango
+                      if (index < 0) index = 0;
+                      if (index >= images.length) index = images.length - 1;
+
+                      currentIndex = index;
+                      const distance = -imageWidth * currentIndex;
+                      track.style.transform = `translateX(${distance}px)`;
+                    }
+
+                    // Eventos para botones
+                    prevBtn.addEventListener('click', () => {
+                      moveToIndex(currentIndex - 1);
+                    });
+
+                    nextBtn.addEventListener('click', () => {
+                      moveToIndex(currentIndex + 1);
+                    });
+
+                    // Inicializar posición
+                    moveToIndex(0);
+                  inicializarCarrusel(); // Inicializas el carrusel en el nuevo contenido
+                }
+
+              }
+
+              // Función para inicializar el carrusel
+              function inicializarCarrusel() {
+                const carouselElement = document.querySelector('#carouselQuienSoy');
+
+                if (carouselElement) {
+                  // Bootstrap 5 usa esta forma para inicializar el carrusel
+                  const carousel = bootstrap.Carousel.getInstance(carouselElement) || new bootstrap.Carousel(carouselElement, {
+                    interval: 5000,
+                    ride: 'carousel'
+                  });
+                }
+              }
+
+               
+                  function scrollCarousel(distance) {
+                      const carousel = document.getElementById('carousel');
+                      carousel.scrollBy({ left: distance, behavior: 'smooth' });
+                    }
+
+
+                // Asignar eventos a los enlaces del menú
+              enlaces.forEach(enlace => {
+                enlace.addEventListener('click', e => {
+                  e.preventDefault();
+                  const seccion = enlace.getAttribute('data-seccion');
+                  cargarSeccion(seccion);
+                });
+              });
+              
+
+              // Carga inicial
+              cargarSeccion('inicio');
+              
+              menuLinks.forEach(link => {
+                  link.addEventListener('click', () => {
+                    // Solo cerrar si el menú está visible (clase 'show')
+                    if (menu.classList.contains('show')) {
+                      // Usar el método de Bootstrap para colapsar el menú
+                      const bsCollapse = bootstrap.Collapse.getInstance(menu);
+                      if (bsCollapse) {
+                        bsCollapse.hide();
+                      }
+                    }
+                  });
+              });
+
+              
+
+            });
+
+
+
+          </script>
+
+          <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+          <script src="app.js"></script>
+        
+            <!-- PIE DE PAGINA -->
+          <footer class="pie-de-pagina bg-dark text-white py-4">
+            <div class="container text-center">
+
+              <div class="iconos-contacto-2 d-flex justify-content-center gap-3 mt-3">
+                <a href="https://www.instagram.com/joel4.0" target="_blank" class="icono-circle instagram" aria-label="Instagram">
+                  <i class="fab fa-instagram fa-lg"></i>
+                </a>
+                <a href="https://wa.me/584127397057" target="_blank" class="icono-circle whatsapp" aria-label="WhatsApp">
+                  <i class="fab fa-whatsapp fa-lg"></i>
+                </a>
+                <a href="https://github.com/ramirezjoel494" target="_blank" class="icono-circle github" aria-label="GitHub">
+                  <i class="fab fa-github fa-lg"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/joel-ramirez-7774391a3/" target="_blank" class="icono-circle linkedin" aria-label="LinkedIn">
+                  <i class="fab fa-linkedin-in fa-lg"></i>
+                </a>
+              </div>
+
+              <p class="mt-3">
+                Copyright © 2025 Joel J. Ramirez | Data Scientist | Site created with RStudio 
+              </p>
+
+              <p class="mt-3">
+                INTELLIGENCE BUSSINES | DATA ANALYST | DATA SCIENCE FOR FINANCE | DATA SCIENCE FOR MARKETING | MACHINE LEARNING | AI FOR DATA SCIENCE | 
+              </p>
+              
+            </div>
+          </footer>
+
+      </div>
+    </main>
+  </body>
+</html>
